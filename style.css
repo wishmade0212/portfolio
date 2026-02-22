@@ -260,8 +260,7 @@ a {
 /* Projects */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(240px, 420px));
-    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
 }
 
@@ -411,10 +410,6 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
     .hero {
         min-height: auto;
         padding-top: 110px;
