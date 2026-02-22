@@ -264,6 +264,10 @@ a {
     gap: 2rem;
 }
 
+#projects.section {
+    padding: 4rem 5%;
+}
+
 .project-card {
     position: relative;
     background: var(--card-bg);
@@ -272,6 +276,9 @@ a {
     box-shadow: var(--shadow);
     border: 1px solid var(--border-color);
     transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    max-width: 360px;
+    width: 100%;
+    justify-self: center;
 }
 
 .project-card:hover {
@@ -297,7 +304,7 @@ a {
 }
 
 .project-info {
-    padding: 1.5rem;
+    padding: 1.2rem;
 }
 
 .project-card-link {
@@ -314,7 +321,7 @@ a {
 .project-thumb {
     display: block;
     width: 100%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
     transition: transform 0.35s ease;
     border-bottom: 1px solid var(--border-color);
