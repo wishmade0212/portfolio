@@ -300,6 +300,23 @@ a {
     padding: 1.5rem;
 }
 
+.project-thumb-link {
+    display: block;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.project-thumb {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.project-card:hover .project-thumb {
+    transform: scale(1.04);
+}
+
 .project-info h3 {
     margin-bottom: 0.5rem;
 }
