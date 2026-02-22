@@ -260,7 +260,8 @@ a {
 /* Projects */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: minmax(280px, 560px);
+    justify-content: center;
     gap: 2rem;
 }
 
@@ -300,6 +301,12 @@ a {
     padding: 1.5rem;
 }
 
+.project-card-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
 .project-thumb-link {
     display: block;
     border-bottom: 1px solid var(--border-color);
@@ -308,9 +315,10 @@ a {
 .project-thumb {
     display: block;
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     transition: transform 0.35s ease;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .project-card:hover .project-thumb {
