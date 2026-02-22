@@ -55,4 +55,37 @@ document.addEventListener('DOMContentLoaded', () => {
         section.classList.add('fade-in-section');
         fadeObserver.observe(section);
     });
+
+    // Interactive spotlight effect for cards
+    document.querySelectorAll('.project-card, .skill-card').forEach(card => {
+        card.addEventListener('mousemove', event => {
+            const rect = card.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+
+            card.style.setProperty('--mouse-x', `${x}px`);
+            card.style.setProperty('--mouse-y', `${y}px`);
+        });
+    });
+
+    // Subtle profile image tilt interaction
+    const profileImage = document.querySelector('.profile-image');
+    const profileWrap = document.querySelector('.hero-image-wrap');
+
+    if (profileImage && profileWrap) {
+        profileWrap.addEventListener('mousemove', event => {
+            const rect = profileWrap.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+
+            const rotateY = ((x / rect.width) - 0.5) * 12;
+            const rotateX = (0.5 - (y / rect.height)) * 12;
+
+            profileImage.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+
+        profileWrap.addEventListener('mouseleave', () => {
+            profileImage.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg)';
+        });
+    }
 });
