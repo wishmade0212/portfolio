@@ -16,3 +16,7 @@ This is a personal portfolio website designed for placement opportunities.
 ## Deployment
 To share this with recruiters:
 -   Upload these files to **GitHub Pages** or **Netlify** for free hosting.
+
+## Live Website (GitHub Pages)
+- URL: https://wishmade0212.github.io/portfolio/
+- Auto-update: Every push to `main` automatically redeploys this portfolio using GitHub Actions.
